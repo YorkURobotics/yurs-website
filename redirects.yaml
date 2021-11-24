@@ -42,10 +42,6 @@ getstartedeecs:
   title: Get Started (EECS Team)
   url: https://github.com/YorkURobotics/yurs-rover-software-dev-guide
   
-react:
-  title: React Discord
-  url: https://discord.gg/hQmKnwCQSk
-  
 # Socials
 
 instagram:
@@ -93,4 +89,12 @@ elegoo:
 yfs:
   title: Sponsor - YFS
   url: https://www.yfs.ca/
+  
+react-signup:
+  title: React Workshop Signup
+  url:  https://yorku.zoom.us/meeting/register/tJAld-yqqDoqGtIGef_AXWqDQ5E9Sh9LPZ9p
+
+react-zoom:
+  title: React Workshop Zoom
+  url: https://yorku.zoom.us/s/94805261006?pwd=a1pYdnJqVjBkS0REY2pFeklmZFZzUT09
   
