@@ -6,15 +6,13 @@ const {
   watch
 } = require("gulp");
 
-const sass = require("gulp-sass");
+const sass = require('gulp-sass')(require('sass'));
 const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 const uglify = require("gulp-uglify");
 const babel = require("gulp-babel");
 const imagemin = require("gulp-imagemin");
 const htmlmin = require("gulp-htmlmin");
-
-sass.compiler = require("node-sass");
 
 const dirs = {
   sass: {
