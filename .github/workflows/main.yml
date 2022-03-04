@@ -20,7 +20,9 @@ jobs:
           ruby-version: 2.7
 
       - name: Setup Node.js enviornemnt
-        uses: actions/setup-node@v1.4.4
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
 
       - name: Install yarn
         run: |
