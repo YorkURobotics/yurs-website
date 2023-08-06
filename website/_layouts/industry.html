@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page.title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center; /* Center the text in all viewports */
+        }
+
+        header {
+            margin-bottom: 30px;
+        }
+
+        .poster-container {
+            text-align: center; /* Center the image in all viewports */
+        }
+
+        .poster-container img {
+            max-width: 100%; /* Scale the image to fit within its container */
+            height: auto; /* Maintain the image's aspect ratio */
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    {{ content }}
+</body>
+</html>
