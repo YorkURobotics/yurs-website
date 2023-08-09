@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <title>{{ page.title }}</title>
+    <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=no"
+  />
+<!--   <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" /> -->
+<!--   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" /> -->
+
+  <link rel="stylesheet" href="assets/css/main.min.css" />
+  <noscript
+    ><link rel="stylesheet" href="assets/css/noscript.min.css"
+  /></noscript>
+  <link rel="shortcut icon" href="assets/img/logo-short.ico" />
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -35,7 +50,8 @@
         }
     </style>
 </head>
-<body>
-    {{ content }}
-</body>
+<body class="is-preload">
+    {% include header.html %} {{ content }} {% include footer.html %} {% include
+    scripts.html %}
+  </body>
 </html>
