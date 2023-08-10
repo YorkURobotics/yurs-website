@@ -18,23 +18,28 @@
   /></noscript>
   <link rel="shortcut icon" href="assets/img/logo-short.ico" />
     <style>
-.clubs {
+
+      clubs {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 10px; /* Adjust the gap between photos */
+    gap: 10px;
 }
 
 .clubs img {
     max-width: 100%;
     height: auto;
+    width: 25%; /* Set a fixed width for each image */
+    flex: 1 1 auto; /* Let the images grow as needed */
 }
-        
-        .buttons-container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  
+.buttons-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 button {
@@ -82,7 +87,7 @@ button {
 }
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
+            max-width: 100%;
             margin: 0 auto;
             padding: 20px;
             text-align: center; 
@@ -104,6 +109,7 @@ height: auto;
 display: flex;
 }
         header {
+    margin-top: 60px; /* Adjust this value as needed */
             margin-bottom: 30px;
         }
 
