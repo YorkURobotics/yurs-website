@@ -28,7 +28,7 @@
 }
 
 .clubs img {
-    max-width: 100%;
+    max-width: fit-content;
     height: auto;
     width: 25%; /* Set a fixed width for each image */
     flex: 1 1 auto; /* Let the images grow as needed */
@@ -102,21 +102,18 @@ button {
 }
         #header #logo {
 position: absolute;
-width: 40px;
+width: 1.75em;
 height: auto;
 display: flex;
 }
-        header {
-    margin-bottom: 30px;
-        }
-
         .poster-container {
-            text-align: center; /* Center the image in all viewports */
+            text-align: center;
         }
 
         .poster-container img {
-            max-width: 100%; /* Scale the image to fit within its container */
-            height: auto; /* Maintain the image's aspect ratio */
+            max-width: 100%; 
+            height: auto;
+            margin-top: 2em;
         }
 
         h2 {
