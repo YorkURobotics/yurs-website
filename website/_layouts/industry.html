@@ -18,22 +18,30 @@
   /></noscript>
   <link rel="shortcut icon" href="assets/img/logo-short.ico" />
     <style>
-
-      clubs {
+  .clubs {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex-wrap: wrap;
     gap: 10px;
 }
-
 .clubs img {
-    max-width: fit-content;
-    height: auto;
-    width: 25%; /* Set a fixed width for each image */
-    flex: 1 1 auto; /* Let the images grow as needed */
+    max-width: 25%;
+    height: 150px;
+    object-fit: contain;
+    flex: 1 1 auto;
 }
-  
+
+/* Adjustments for mobile screens */
+@media (max-width: 768px) {
+    .clubs {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+        align-items: flex-start;
+    }
+
+    .clubs img {
+        max-width: 100%; /* Images take full width on mobile */
+    }
+}
 .buttons-container {
     width: 100%;
     display: flex;
@@ -124,6 +132,10 @@ display: flex;
         p {
             font-size: 16px;
             line-height: 1.6;
+            text-align: justify;
+        }
+        #footer {
+        margin-top: 2em;
         }
     </style>
 </head>
