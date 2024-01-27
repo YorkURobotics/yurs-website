@@ -34,6 +34,7 @@ jobs:
       - name: Install all dependencies
         run: |
           cd website && bundle install --jobs=10 && cd ..
+          gem install jekyll --user-install 
           yarn
 
       - name: Build assets (such as imgs, css, js, etc.) with gulp (pre-build of website)
