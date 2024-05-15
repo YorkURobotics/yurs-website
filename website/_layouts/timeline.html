@@ -1,16 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="{{ site.description }}" />
-    <meta name="author" content="{{ site.author }}" />
-    <meta name="keywords" content="{{ site.keywords }}" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="{{ site.author }}">
+    <meta name="keywords" content="{{ site.keywords }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-    <title>{{ site.title }} {% if page.title %} | {{ page.title }}{% endif %}</title>
+    <title>{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet">
@@ -30,11 +29,10 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-	<header class="intro">
+    <!-- Intro Header -->
+    <header class="intro">
         <div class="intro-body">
             <div class="container">
                 <div class="row">
@@ -50,25 +48,23 @@
             </div>
         </div>
     </header>
-   <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i>  {{ site.title }}
+                    <i class="fa fa-play-circle"></i> {{ site.title }}
                 </a>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-
                     {% for page in site.pages | sort: "title" %}
                     {% unless page.url == "/index.html" or page.url == "/" %}
                     <li>
@@ -78,69 +74,56 @@
                     {% endfor %}
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
 
-  {% for page in site.pages %}
+    <!-- Page Sections -->
+    {% for page in site.pages %}
     {% if page.section-type == "default" %}
-      <!-- {{ page.title }} Section -->
-      <section id="{{ page.title }}" class="container content-section text-center">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2">
+    <section id="{{ page.title }}" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
                 {{ page.content | markdownify }}
-              </div>
-          </div>
-      </section>
+            </div>
+        </div>
+    </section>
     {% elsif page.section-type == "timeline" %}
-      <!-- {{ page.title }} Section -->
-      <section id="{{ page.title }}" class="container content-section text-center">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2">
+    <section id="{{ page.title }}" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
                 {{ page.content | markdownify }}
                 <ul class="timeline">
                 {% for post in site.posts %}
-                  {% assign loopindex = forloop.index | modulo: 2 %}
-                  {% capture class %}
-                    {% if loopindex == 0 %}
-                      timeline-inverted
-                    {% endif %}
-                  {% endcapture %}
-
-                  <li class="{{ class }}">
-                      <div class="timeline-image">
-                          <img class="img-circle img-responsive" src="{{ site.baseurl }}/{% if post.image %}{{ post.image }}{% else %}{{site.career-img}}{% endif %}" alt="">
-                      </div>
-                      <div class="timeline-panel">
-                          <div class="timeline-heading">
-                              <h4>{{ post.title }}</h4>
-                              <h4 class="subheading">{{ post.subtitle }}</h4>
-                          </div>
-                          <div class="timeline-body">
-                              <p class="text-muted">{{ post.content }}</p>
-                          </div>
-                      </div>
-                  </li>
-
-                {% endfor %}
-
-                  <li class="timeline-inverted">
+                {% assign loopindex = forloop.index | modulo: 2 %}
+                <li class="{% if loopindex == 0 %}timeline-inverted{% endif %}">
                     <div class="timeline-image">
-                      <img class="img-circle img-responsive" src="{{ site.baseurl }}/{{ site.career-img }}" alt="">
+                        <img class="img-circle img-responsive" src="{{ site.baseurl }}/{% if post.image %}{{ post.image }}{% else %}{{ site.career-img }}{% endif %}" alt="{{ post.title }}">
                     </div>
-                  </li>
-   
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>{{ post.title }}</h4>
+                            <h4 class="subheading">{{ post.subtitle }}</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">{{ post.content }}</p>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+                <li class="timeline-inverted">
+                    <div class="timeline-image">
+                        <img class="img-circle img-responsive" src="{{ site.baseurl }}/{{ site.career-img }}" alt="Career Image">
+                    </div>
+                </li>
                 </ul>
-
-              </div>
-          </div>
-      </section>
+            </div>
+        </div>
+    </section>
     {% endif %}
-  {% endfor %}
-
-	{% include footer.html %}
-	    <!-- jQuery -->
+    {% endfor %}
+    
+    {% include footer.html %}
+    <!-- jQuery -->
     <script src="{{ site.baseurl }}/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
@@ -151,6 +134,5 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="{{ site.baseurl }}/js/grayscale.js"></script>
-
 </body>
 </html>
