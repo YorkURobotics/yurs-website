@@ -1,124 +1,130 @@
 <!DOCTYPE html>
 <html>
-<head>
-    
+  <head>
     <title>{{ page.title }}</title>
     <meta charset="utf-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, user-scalable=no"
-  />
-<!--   <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <!--   <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" /> -->
-<!--   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" /> -->
+    <!--   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" /> -->
 
-  <link rel="stylesheet" href="assets/css/main.min.css" />
-  <noscript
-    ><link rel="stylesheet" href="assets/css/noscript.min.css"
-  /></noscript>
-  <link rel="shortcut icon" href="assets/img/logo-short.ico" />
+    <link rel="stylesheet" href="assets/css/main.min.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.min.css"
+    /></noscript>
+    <link rel="shortcut icon" href="assets/img/logo-short.ico" />
     <style>
-  .clubs {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-}
-.clubs img {
-    max-width: 25%;
-    height: 150px;
-    object-fit: contain;
-    flex: 1 1 auto;
-}
-body {
-            font-family: Arial, sans-serif;
-            max-width: 100%;
-            margin: 0 auto;
-            text-align: center; 
-        }
-.partner {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-}
-.partner img {
-    max-width: 14%;
-    height: 150px;
-    object-fit: contain;
-    flex: 1 1 auto;
-}
-.button {
-  background-color: #111827;
-  border: 1px solid transparent;
-  border-radius: .75rem;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  flex: 0 0 auto;
-  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 1.5rem;
-  padding: .75rem 1.2rem;
-  text-align: center;
-  text-decoration: none #6B7280 solid;
-  
-  touch-action: manipulation;
-  width: auto;
-}
-
-/* Adjustments for mobile screens */
-@media (max-width: 768px) {
-    .clubs {
-        flex-direction: column; /* Stack images vertically on smaller screens */
+      .clubs {
+        display: flex;
+        justify-content: flex-start;
         align-items: center;
-    }
-    .button {
-    padding: .75rem 1.5rem;
-    }
-    .clubs img {
-        max-width: 100%; /* Images take full width on mobile */
-    }
-    .partner {
-        flex-direction: column; /* Stack images vertically on smaller screens */
+        gap: 10px;
+      }
+      .clubs img {
+        max-width: 25%;
+        height: 150px;
+        object-fit: contain;
+        flex: 1 1 auto;
+      }
+      .in_text {
+        padding: 3%;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .partner {
+        display: flex;
+        justify-content: flex-start;
         align-items: center;
-    }
+        gap: 10px;
+        padding: 3%;
+      }
+      .partner img {
+        max-width: 14%;
+        height: 150px;
+        object-fit: contain;
+        flex: 1 1 auto;
+      }
+      .button {
+        background-color: #111827;
+        border: 1px solid transparent;
+        border-radius: 0.75rem;
+        box-sizing: border-box;
+        color: #ffffff;
+        cursor: pointer;
+        flex: 0 0 auto;
+        font-family: "Inter var", ui-sans-serif, system-ui, -apple-system,
+          system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+          "Noto Color Emoji";
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 1.5rem;
+        padding: 0.75rem 1.2rem;
+        text-align: center;
+        text-decoration: none #6b7280 solid;
 
-    .partner img {
-        max-width: 100%; /* Images take full width on mobile */
-    }
-}
+        touch-action: manipulation;
+        width: auto;
+      }
 
-        #header #logo {
-position: absolute;
-width: 1.75em;
-height: auto;
-display: flex;
-}
-        .poster-container {
-            text-align: center;
+      /* Adjustments for mobile screens */
+      @media (max-width: 768px) {
+        .clubs {
+          flex-direction: column; /* Stack images vertically on smaller screens */
+          align-items: center;
+        }
+        .button {
+          padding: 0.75rem 1.5rem;
+        }
+        .clubs img {
+          max-width: 100%; /* Images take full width on mobile */
+        }
+        .partner {
+          flex-direction: column; /* Stack images vertically on smaller screens */
+          align-items: center;
         }
 
-        .poster-container img {
-            max-width: 100%; 
-            height: auto;
-            margin-top: 2em;
+        .partner img {
+          max-width: 100%; /* Images take full width on mobile */
         }
+      }
 
-        h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
+      #header #logo {
+        position: absolute;
+        width: 1.75em;
+        height: auto;
+        display: flex;
+      }
+      .poster-container {
+        text-align: center;
+      }
 
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            text-align: justify;
-        }
+      .poster-container img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 2em;
+      }
+
+      h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: justify;
+      }
     </style>
-</head>
-<body class="is-preload">
+  </head>
+  <body class="is-preload">
     {% include header.html %} {{ content }} {% include footer.html %} {% include
     scripts.html %}
   </body>
