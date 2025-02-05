@@ -90,7 +90,7 @@
 /* Home Page */
 
 #intro {
-  background: url("../img/overlay.png"), url("../img/circ.jpeg");
+  background: url("../img/overlay.png"), url("../img/home-circ.jpg");
   background-size: 256px 256px, cover;
   background-attachment: fixed, fixed;
   background-position: top left, bottom center;
@@ -381,24 +381,6 @@ body.loaded:before {
 
 img.sponsor {
   padding: 10px;
-}
-
-.platinum > a > img.sponsor {
-  width: 38%;
-  height: auto;
-}
-
-.gold > a > img.sponsor {
-  width: 33%;
-  height: auto;
-}
-
-.silver > a > img.sponsor {
-  width: 28%;
-  height: auto;
-}
-
-.bronze > a > img.sponsor {
-  width: 23%;
-  height: auto;
+  height: 240px;
+  width: auto;
 }
