@@ -40,9 +40,6 @@ jobs:
       - name: Build assets (such as imgs, css, js, etc.) with gulp (pre-build of website)
         run: gulp prebuild
 
-      - name: Build link redirect pages
-        run: node create_site_redirect_links.js
-
       - name: Build site with Jekyll
         run: cd website && bundle exec jekyll build && cd ..
 
