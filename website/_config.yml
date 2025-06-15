@@ -41,6 +41,7 @@ join_now_link: /join
 # theme: minima
 plugins:
   - jekyll-sitemap
+  - jekyll-redirect-from
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
