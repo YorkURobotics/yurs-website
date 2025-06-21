@@ -6,9 +6,8 @@
         ("%" == t.slice(-1)
           ? (t = (parseInt(t.substring(0, t.length - 1)) / 100) * e)
           : "vh" == t.slice(-2)
-          ? (t = (parseInt(t.substring(0, t.length - 2)) / 100) * n)
-          : "px" == t.slice(-2) &&
-            (t = parseInt(t.substring(0, t.length - 2)))),
+            ? (t = (parseInt(t.substring(0, t.length - 2)) / 100) * n)
+            : "px" == t.slice(-2) && (t = parseInt(t.substring(0, t.length - 2)))),
       t
     );
   }
@@ -51,7 +50,7 @@
             terminate: null,
             scroll: null,
           },
-          l
+          l,
         )),
         u.mode)
       ) {
@@ -109,8 +108,7 @@
               h
                 ? this.options.enter && this.options.enter.apply(this.element)
                 : this.options.leave && this.options.leave.apply(this.element)),
-            this.options.scroll &&
-              this.options.scroll.apply(this.element, [(o - r) / (a - r)]);
+            this.options.scroll && this.options.scroll.apply(this.element, [(o - r) / (a - r)]);
         }),
         (p = {
           id: a,

@@ -22,14 +22,14 @@ var breakpoints = (function () {
           (">=" == e.substr(0, 2)
             ? ((a = "gte"), (n = e.substr(2)))
             : "<=" == e.substr(0, 2)
-            ? ((a = "lte"), (n = e.substr(2)))
-            : ">" == e.substr(0, 1)
-            ? ((a = "gt"), (n = e.substr(1)))
-            : "<" == e.substr(0, 1)
-            ? ((a = "lt"), (n = e.substr(1)))
-            : "!" == e.substr(0, 1)
-            ? ((a = "not"), (n = e.substr(1)))
-            : ((a = "eq"), (n = e)),
+              ? ((a = "lte"), (n = e.substr(2)))
+              : ">" == e.substr(0, 1)
+                ? ((a = "gt"), (n = e.substr(1)))
+                : "<" == e.substr(0, 1)
+                  ? ((a = "lt"), (n = e.substr(1)))
+                  : "!" == e.substr(0, 1)
+                    ? ((a = "not"), (n = e.substr(1)))
+                    : ((a = "eq"), (n = e)),
           n && n in t.list)
         )
           if (((i = t.list[n]), Array.isArray(i))) {
@@ -92,24 +92,10 @@ var breakpoints = (function () {
                   s = "screen and (max-width: " + (r - 1) + c + ")";
                   break;
                 case "not":
-                  s =
-                    "screen and (max-width: " +
-                    (r - 1) +
-                    c +
-                    "), screen and (min-width: " +
-                    (d + 1) +
-                    c +
-                    ")";
+                  s = "screen and (max-width: " + (r - 1) + c + "), screen and (min-width: " + (d + 1) + c + ")";
                   break;
                 default:
-                  s =
-                    "screen and (min-width: " +
-                    r +
-                    c +
-                    ") and (max-width: " +
-                    d +
-                    c +
-                    ")";
+                  s = "screen and (min-width: " + r + c + ") and (max-width: " + d + c + ")";
               }
           } else s = "(" == i.charAt(0) ? "screen and " + i : i;
         t.media[e] = !!s && s;
@@ -122,10 +108,7 @@ var breakpoints = (function () {
     poll: function () {
       var e, n;
       for (e = 0; e < t.events.length; e++)
-        (n = t.events[e]),
-          t.active(n.query)
-            ? n.state || ((n.state = !0), n.handler())
-            : n.state && (n.state = !1);
+        (n = t.events[e]), t.active(n.query) ? n.state || ((n.state = !0), n.handler()) : n.state && (n.state = !1);
     },
   };
   return (
@@ -143,8 +126,8 @@ var breakpoints = (function () {
   "function" == typeof define && define.amd
     ? define([], t)
     : "object" == typeof exports
-    ? (module.exports = t())
-    : (e.breakpoints = t());
+      ? (module.exports = t())
+      : (e.breakpoints = t());
 })(this, function () {
   return breakpoints;
 });

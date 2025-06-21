@@ -7,13 +7,14 @@
 }
 
 body {
-  font: normal 16px/1.5 "Helvetica Neue", sans-serif;
+  font:
+    normal 16px/1.5 "Helvetica Neue",
+    sans-serif;
   background: #456990;
   color: #fff;
   overflow-x: hidden;
   padding-bottom: 50px;
 }
-
 
 /* INTRO SECTION
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -33,7 +34,6 @@ body {
 h1 {
   font-size: 2.5rem;
 }
-
 
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -109,7 +109,6 @@ time {
   margin-bottom: 8px;
 }
 
-
 /* EFFECTS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -141,7 +140,6 @@ time {
   opacity: 1;
 }
 
-
 /* GENERAL MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -172,7 +170,6 @@ time {
   }
 }
 
-
 /* EXTRA/CLIP PATH STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .timeline-clippy ul li::after {
@@ -190,30 +187,11 @@ time {
 }
 
 .timeline-star ul li::after {
-  clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
 
 .timeline-heptagon ul li::after {
-  clip-path: polygon(
-    50% 0%,
-    90% 20%,
-    100% 60%,
-    75% 100%,
-    25% 100%,
-    0% 60%,
-    10% 20%
-  );
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
 }
 
 .timeline-infinite ul li::after {
@@ -231,7 +209,6 @@ time {
     transform: translateX(-50%) scale(1);
   }
 }
-
 
 /* FOOTER STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

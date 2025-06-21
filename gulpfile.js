@@ -1,12 +1,6 @@
-const {
-  series,
-  src,
-  dest,
-  parallel,
-  watch
-} = require("gulp");
+const { series, src, dest, parallel, watch } = require("gulp");
 
-const sass = require('gulp-sass')(require('sass'));
+const sass = require("gulp-sass")(require("sass"));
 const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 const uglify = require("gulp-uglify");
@@ -52,12 +46,12 @@ function compileSassAndMinify() {
             specialComments: 0,
           },
         },
-      })
+      }),
     )
     .pipe(
       rename({
         extname: ".min.css",
-      })
+      }),
     )
     .pipe(dest(dirs.sass.dest));
 }
@@ -67,28 +61,30 @@ function uglifyJS() {
     .pipe(
       babel({
         presets: ["@babel/env"],
-      })
+      }),
     )
     .pipe(uglify())
     .pipe(
       rename({
         extname: ".min.js",
-      })
+      }),
     )
     .pipe(dest(dirs.js.dest));
 }
 
 function minifyImages() {
-  return src(dirs.img.src).pipe(imagemin([
-    imagemin.gifsicle({interlaced: true}),
-    imagemin.mozjpeg({quality: 75, progressive: true}),
-    imagemin.optipng({optimizationLevel: 7}),
-    imagemin.svgo({
-        plugins: [
-            {removeViewBox: true},
-            {cleanupIDs: false}
-        ]
-    })])).pipe(dest(dirs.img.dest));
+  return src(dirs.img.src)
+    .pipe(
+      imagemin([
+        imagemin.gifsicle({ interlaced: true }),
+        imagemin.mozjpeg({ quality: 75, progressive: true }),
+        imagemin.optipng({ optimizationLevel: 7 }),
+        imagemin.svgo({
+          plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
+        }),
+      ]),
+    )
+    .pipe(dest(dirs.img.dest));
 }
 
 function processImages() {
@@ -103,21 +99,9 @@ function processWebfonts() {
   return src(dirs.webfonts.src).pipe(dest(dirs.webfonts.dest));
 }
 
-exports.prebuild = parallel(
-  compileSassAndMinify,
-  uglifyJS,
-  minifyImages,
-  processSvgs,
-  processWebfonts
-);
+exports.prebuild = parallel(compileSassAndMinify, uglifyJS, minifyImages, processSvgs, processWebfonts);
 
-exports.devprebuild = parallel(
-  compileSassAndMinify,
-  uglifyJS,
-  processImages,
-  processSvgs,
-  processWebfonts
-);
+exports.devprebuild = parallel(compileSassAndMinify, uglifyJS, processImages, processSvgs, processWebfonts);
 
 function minifyHtml() {
   return src(dirs.html.src)
@@ -125,7 +109,7 @@ function minifyHtml() {
       htmlmin({
         collapseWhitespace: true,
         removeComments: true,
-      })
+      }),
     )
     .pipe(dest(dirs.html.dest));
 }
@@ -138,4 +122,4 @@ exports.dev = () => {
   watch(dirs.svg.src, processSvgs);
   watch(dirs.webfonts.src, processWebfonts);
   watch(dirs.img.src, processImages);
-}
+};
