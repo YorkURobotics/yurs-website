@@ -91,9 +91,13 @@
 
 #intro {
   background: url("../img/overlay.png"), url("../img/home-circ.jpg");
-  background-size: 256px 256px, cover;
+  background-size:
+    256px 256px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, bottom center;
+  background-position:
+    top left,
+    bottom center;
   background-repeat: repeat, no-repeat;
   background-position-y: 20%;
   background-position-x: 60%;
@@ -101,9 +105,13 @@
 
 #video {
   background: url("../img/overlay.png"), url("../img/video-background.png");
-  background-size: 256px 256px, cover;
+  background-size:
+    256px 256px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, center center;
+  background-position:
+    top left,
+    center center;
   background-position-y: 70%;
 }
 
@@ -141,9 +149,13 @@ small.new {
 
 #about {
   background: url("../img/overlay.png"), url("../img/about-us.jpeg");
-  background-size: 256px 256px, cover;
+  background-size:
+    256px 256px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, center center;
+  background-position:
+    top left,
+    center center;
   background-position-y: 70%;
 }
 
@@ -151,43 +163,61 @@ small.new {
 
 #intro-rover {
   background: url("../img/overlay.png"), url("../img/rover.jpeg");
-  background-size: 256px 256px, cover;
+  background-size:
+    256px 256px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, bottom center;
+  background-position:
+    top left,
+    bottom center;
   background-repeat: repeat, no-repeat;
 }
 
 #rover-point-1 {
   background: url("../img/overlay.png"), url("../img/rover-software-team.png");
-  background-size: 256px 256px, cover;
+  background-size:
+    256px 256px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, bottom center;
+  background-position:
+    top left,
+    bottom center;
   background-repeat: repeat, no-repeat;
 }
 
 #rover-point-2 {
   background: url("../img/overlay.png"), url("../img/rover-science-team.png");
-  background-size: 256px 256px, cover;
+  background-size:
+    256px 256px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, bottom center;
+  background-position:
+    top left,
+    bottom center;
   background-repeat: repeat, no-repeat;
 }
 
 #rover-point-3 {
-  background: url("../img/overlay.png"),
-    url("../img/rover-electrical-team-1.jpeg");
-  background-size: 256px 256px, cover;
+  background: url("../img/overlay.png"), url("../img/rover-electrical-team-1.jpeg");
+  background-size:
+    256px 256px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, bottom center;
+  background-position:
+    top left,
+    bottom center;
   background-repeat: repeat, no-repeat;
 }
 
 #rover-point-4 {
-  background: url("../img/overlay.png"),
-    url("../img/rover-mechanical-team-1.jpg");
-  background-size: 256px 256px, cover;
+  background: url("../img/overlay.png"), url("../img/rover-mechanical-team-1.jpg");
+  background-size:
+    256px 256px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, bottom center;
+  background-position:
+    top left,
+    bottom center;
   background-repeat: repeat, no-repeat;
   background-position-y: 10%;
 }
@@ -196,19 +226,26 @@ small.new {
 
 #intro-sumobot {
   background: url("../img/overlay.png"), url("../img/sumobot.jpeg");
-  background-size: 256px 256px, cover;
+  background-size:
+    256px 256px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, bottom center;
+  background-position:
+    top left,
+    bottom center;
   background-repeat: repeat, no-repeat;
   background-position: 10% 30%;
 }
 
 #sumobot-point-1 {
-  background: url("../img/overlay.png"),
-    url("../img/sumobot-soldering-event.jpeg");
-  background-size: 256px 256px, cover;
+  background: url("../img/overlay.png"), url("../img/sumobot-soldering-event.jpeg");
+  background-size:
+    256px 256px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, bottom center;
+  background-position:
+    top left,
+    bottom center;
   background-repeat: repeat, no-repeat;
   // background-position-y: 60%;
   //   background-position-x: 110%;
@@ -217,36 +254,52 @@ small.new {
 
 #sumobot-point-2 {
   background: url("../img/overlay.png"), url("../img/sumobot-win.jpeg");
-  background-size: 256px 256px, cover;
+  background-size:
+    256px 256px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, bottom center;
+  background-position:
+    top left,
+    bottom center;
   background-repeat: repeat, no-repeat;
   background-position-y: 60%;
 }
 
 #sumobot-point-3 {
   background: url("../img/overlay.png"), url("../img/sumobot-coding.jpg");
-  background-size: 256px 256px, cover;
+  background-size:
+    256px 256px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, bottom center;
+  background-position:
+    top left,
+    bottom center;
   background-repeat: repeat, no-repeat;
   background-position-y: 60%;
 }
 
 #sumobot-point-4 {
   background: url("../img/overlay.png"), url("../img/sumobot-circuits.jpeg");
-  background-size: 256px 256px, cover;
+  background-size:
+    256px 256px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, bottom center;
+  background-position:
+    top left,
+    bottom center;
   background-repeat: repeat, no-repeat;
   background-position-y: 60%;
 }
 
 #sumobot-point-5 {
   background: url("../img/overlay.png"), url("../img/sumobot-modeling.png");
-  background-size: 256px 256px, cover;
+  background-size:
+    256px 256px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, bottom center;
+  background-position:
+    top left,
+    bottom center;
   background-repeat: repeat, no-repeat;
   background-position-y: 60%;
 }
@@ -255,66 +308,97 @@ small.new {
 
 #intro-elections {
   background: url("../img/overlay.png"), url("../img/elections/home.jpeg");
-  background-size: 1000px 1000px, cover;
+  background-size:
+    1000px 1000px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, bottom center;
+  background-position:
+    top left,
+    bottom center;
   background-repeat: repeat, no-repeat;
 }
 
 #election-point-1 {
   background: url("../img/overlay.png"), url("../img/elections/president.jpeg");
-  background-size: 10000px 10000px, cover;
+  background-size:
+    10000px 10000px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, bottom center;
+  background-position:
+    top left,
+    bottom center;
   background-repeat: repeat, no-repeat;
 }
 
 #election-point-2 {
   background: url("../img/overlay.png"), url("../img/elections/treasurer.jpeg");
-  background-size: 10000px 10000px, cover;
+  background-size:
+    10000px 10000px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, bottom center;
+  background-position:
+    top left,
+    bottom center;
   background-repeat: repeat, no-repeat;
 }
 
 #election-point-3 {
   background: url("../img/overlay.png"), url("../img/elections/outreach.jpeg");
-  background-size: 10000px 10000px, cover;
+  background-size:
+    10000px 10000px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, bottom center;
+  background-position:
+    top left,
+    bottom center;
   background-repeat: repeat, no-repeat;
 }
 
 #election-point-4 {
-  background: url("../img/overlay.png"),
-    url("../img/elections/fundraising.jpeg");
-  background-size: 10000px 10000px, cover;
+  background: url("../img/overlay.png"), url("../img/elections/fundraising.jpeg");
+  background-size:
+    10000px 10000px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, bottom center;
+  background-position:
+    top left,
+    bottom center;
   background-repeat: repeat, no-repeat;
 }
 
 #election-point-5 {
   background: url("../img/overlay.png"), url("../img/elections/lead.jpeg");
-  background-size: 10000px 10000px, cover;
+  background-size:
+    10000px 10000px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, bottom center;
+  background-position:
+    top left,
+    bottom center;
   background-repeat: repeat, no-repeat;
 }
 
 #election-point-6 {
   background: url("../img/overlay.png"), url("../img/elections/social.jpeg");
-  background-size: 10000px 10000px, cover;
+  background-size:
+    10000px 10000px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, bottom center;
+  background-position:
+    top left,
+    bottom center;
   background-repeat: repeat, no-repeat;
 }
 
 #election-point-7 {
   background: url("../img/overlay.png"), url("../img/elections/creative.jpeg");
-  background-size: 10000px 10000px, cover;
+  background-size:
+    10000px 10000px,
+    cover;
   background-attachment: fixed, fixed;
-  background-position: top left, bottom center;
+  background-position:
+    top left,
+    bottom center;
   background-repeat: repeat, no-repeat;
 }
 
