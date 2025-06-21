@@ -27,6 +27,7 @@
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^8.0.0",
     "js-yaml": "^3.14.0",
+    "prettier": "^3.5.3",
     "sass": "^1.49.9"
   },
   "dependencies": {}
