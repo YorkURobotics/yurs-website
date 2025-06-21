@@ -37,6 +37,9 @@ jobs:
           gem install jekyll --user-install 
           yarn
 
+      - name: Check Prettier formatting
+        run: yarn prettier --check .
+
       - name: Build assets (such as imgs, css, js, etc.) with gulp (pre-build of website)
         run: gulp prebuild
 
