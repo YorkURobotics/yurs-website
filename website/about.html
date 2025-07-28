@@ -23,143 +23,26 @@ layout: default
   </div>
 </section>
 
-<section id="about-section-meet-executive-council" class="main style3 primary" aria-labelledby="team-heading">
-  <div class="content">
-    <header>
-      <h2>Executive Council</h2>
-    </header>
-    <div class="team-grid">
-      <article class="team-member">
-        <figure>
-          <img src="assets/img/pfp.jpg" alt="Portrait of Barbod Habibi" class="team-member-pfp">
-          <figcaption>
-            <h3>Pramithy Krishnan</h3>
-            <p>Space Engineering, B.Eng.</p>
-            <p>President</p>
-          </figcaption>
-        </figure>
-      </article>
-      <article class="team-member">
-        <figure>
-          <img src="assets/img/pfp.jpg" alt="Portrait of Barbod Habibi" class="team-member-pfp">
-          <figcaption>
-            <h3>James Liang</h3>
-            <p>Business Administration, B.B.A.</p>
-            <p>Treasurer</p>
-          </figcaption>
-        </figure>
-      </article>
-      <article class="team-member">
-        <figure>
-          <img src="assets/img/pfp.jpg" alt="Portrait of Barbod Habibi" class="team-member-pfp">
-          <figcaption>
-            <h3>Menachem Guttmann</h3>
-            <p>Electrical Engineering, B.Eng.</p>
-            <p>VP Outreach & Events</p>
-          </figcaption>
-        </figure>
-      </article>
-      <article class="team-member">
-        <figure>
-          <img src="assets/img/pfp.jpg" alt="Portrait of Barbod Habibi" class="team-member-pfp">
-          <figcaption>
-            <h3>?</h3>
-            <p>?</p>
-            <p>VP Sponsorships & Fundraising</p>
-          </figcaption>
-        </figure>
-      </article>
-      <article class="team-member">
-        <figure>
-          <img src="assets/img/pfp.jpg" alt="Portrait of Barbod Habibi" class="team-member-pfp">
-          <figcaption>
-            <h3>Rayyan Makda</h3>
-            <p>Mechanical Engineering, B.Eng.</p>
-            <p>Rover Team Lead</p>
-          </figcaption>
-        </figure>
-      </article>
-      <article class="team-member">
-        <figure>
-          <img src="assets/img/pfp.jpg" alt="Portrait of Barbod Habibi" class="team-member-pfp">
-          <figcaption>
-            <h3>Adara Hagman</h3>
-            <p>Space Engineering, B.Eng.</p>
-            <p>SumoBot Team Lead</p>
-          </figcaption>
-        </figure>
-      </article>
+{% for team in site.data.teams %}
+  <section id="about-section-meet-executive-council" class="main style3 primary {% if forloop.index > 1 %}container-partial-content{% else %}{% endif %}" aria-labelledby="team-heading">
+    <div class="content">
+      <header>
+        <h2>{{ team.name }}</h2>
+      </header>
+      <div class="team-grid">
+        {% for member in team.members %}
+          <article class="team-member">
+            <figure>
+              <img src="assets/img/pfp.jpg" alt="Portrait of {{  }}" class="team-member-pfp">
+              <figcaption>
+                <h3>{{ member.name }}</h3>
+                <p>{{ member.major }}, {{ member.degree }}</p>
+                <p>{{ member.position }}</p>
+              </figcaption>
+            </figure>
+          </article>
+        {% endfor %}
+      </div>
     </div>
-  </div>
-</section>
-
-<section id="about-section-meet-executive-body" class="main style3 primary container-partial-content"
-         aria-labelledby="team-heading">
-  <div class="content">
-    <header>
-      <h2>Executive Body</h2>
-    </header>
-    <div class="team-grid">
-      <article class="team-member">
-        <figure>
-          <img src="assets/img/pfp.jpg" alt="Portrait of Barbod Habibi" class="team-member-pfp">
-          <figcaption>
-            <h3>Tanvi Jain</h3>
-            <p>Electrical Engineering, B.Eng.</p>
-            <p>Secretarial Director</p>
-          </figcaption>
-        </figure>
-      </article>
-      <article class="team-member">
-        <figure>
-          <img src="assets/img/pfp.jpg" alt="Portrait of Barbod Habibi" class="team-member-pfp">
-          <figcaption>
-            <h3>Renee Pasher</h3>
-            <p>Theatre Production & Design, B.F.A.</p>
-            <p>Communications Director</p>
-          </figcaption>
-        </figure>
-      </article>
-      <article class="team-member">
-        <figure>
-          <img src="assets/img/pfp.jpg" alt="Portrait of Barbod Habibi" class="team-member-pfp">
-          <figcaption>
-            <h3>?</h3>
-            <p>?</p>
-            <p>Logistics Director</p>
-          </figcaption>
-        </figure>
-      </article>
-      <article class="team-member">
-        <figure>
-          <img src="assets/img/pfp.jpg" alt="Portrait of Barbod Habibi" class="team-member-pfp">
-          <figcaption>
-            <h3>Barbod Habibi</h3>
-            <p>Computer Science, B.Sc.</p>
-            <p>Web Director</p>
-          </figcaption>
-        </figure>
-      </article>
-      <article class="team-member">
-        <figure>
-          <img src="assets/img/pfp.jpg" alt="Portrait of Barbod Habibi" class="team-member-pfp">
-          <figcaption>
-            <h3>?</h3>
-            <p>?</p>
-            <p>Accounting Director</p>
-          </figcaption>
-        </figure>
-      </article>
-      <article class="team-member">
-        <figure>
-          <img src="assets/img/pfp.jpg" alt="Portrait of Barbod Habibi" class="team-member-pfp">
-          <figcaption>
-            <h3>Rima Ramcharan</h3>
-            <p>Computer Science, B.Sc.</p>
-            <p>Creative Director</p>
-          </figcaption>
-        </figure>
-      </article>
-    </div>
-  </div>
-</section>
+  </section>
+{% endfor %}

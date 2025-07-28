@@ -1,0 +1,71 @@
+[
+  {
+    "name": "Executive Council",
+    "members": [
+      {
+        "name": "Pramithy Krishnan",
+        "position": "President",
+        "major": "Space Engineering",
+        "degree": "B.Eng.",
+        "imgSrc": "assets/img/pfp.jpg"
+      },
+      {
+        "name": "James Liang",
+        "position": "Treasurer",
+        "major": "Business Administration",
+        "degree": "B.B.A.",
+        "imgSrc": "assets/img/pfp.jpg"
+      },
+      {
+        "name": "Menachem Guttman",
+        "position": "VP Outreach & Events",
+        "major": "Electrical Engineering",
+        "degree": "B.Eng.",
+        "imgSrc": "assets/img/pfp.jpg"
+      },
+      {
+        "name": "Rayyan Makda",
+        "position": "Rover Team Lead",
+        "major": "Mechanical Engineering",
+        "degree": "B.Eng.",
+        "imgSrc": "assets/img/pfp.jpg"
+      },
+      {
+        "name": "Adara Hagman",
+        "position": "SumoBot Team Lead",
+        "major": "Space Engineering",
+        "degree": "B.Eng.",
+        "imgSrc": "assets/img/pfp.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Executive Body",
+    "members": [
+      {
+        "name": "Tanvi Jain",
+        "position": "Secretarial Director",
+        "major": "Electrical Engineering",
+        "degree": "B.Eng."
+      },
+      {
+        "name": "Renee Pasher",
+        "position": "Communications Director",
+        "major": "Theatre Production & Design",
+        "degree": "B.F.A."
+      },
+      {
+        "name": "Barbod Habibi",
+        "position": "Web Director",
+        "major": "Computer Science",
+        "degree": "B.Sc."
+      },
+      {
+        "name": "Rima Ramcharan",
+        "position": "Creative Director",
+        "major": "Computer Science",
+        "degree": "B.Sc."
+      }
+    ]
+  }
+]
