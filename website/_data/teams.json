@@ -21,7 +21,7 @@
         "position": "VP Outreach & Events",
         "major": "Electrical Engineering",
         "degree": "B.Eng.",
-        "imgSrc": "assets/img/pfp.jpg"
+        "imgSrc": "assets/img/execs/menachem-guttmann.jpg"
       },
       {
         "name": "Rayyan Makda",
@@ -46,25 +46,29 @@
         "name": "Tanvi Jain",
         "position": "Secretarial Director",
         "major": "Electrical Engineering",
-        "degree": "B.Eng."
+        "degree": "B.Eng.",
+        "imgSrc": "assets/img/pfp.jpg"
       },
       {
         "name": "Renee Pasher",
         "position": "Communications Director",
         "major": "Theatre Production & Design",
-        "degree": "B.F.A."
+        "degree": "B.F.A.",
+        "imgSrc": "assets/img/pfp.jpg"
       },
       {
         "name": "Barbod Habibi",
         "position": "Web Director",
         "major": "Computer Science",
-        "degree": "B.Sc."
+        "degree": "B.Sc.",
+        "imgSrc": "assets/img/execs/barbod-habibi.jpeg"
       },
       {
         "name": "Rima Ramcharan",
         "position": "Creative Director",
         "major": "Computer Science",
-        "degree": "B.Sc."
+        "degree": "B.Sc.",
+        "imgSrc": "assets/img/pfp.jpg"
       }
     ]
   }

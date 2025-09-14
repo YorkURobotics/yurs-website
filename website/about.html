@@ -33,7 +33,7 @@ layout: default
         {% for member in team.members %}
           <article class="team-member">
             <figure>
-              <img src="assets/img/pfp.jpg" alt="Portrait of {{  }}" class="team-member-pfp">
+              <img src="{{ member.imgSrc }}" alt="Portrait of {{ member.name }}" class="team-member-pfp">
               <figcaption>
                 <h3>{{ member.name }}</h3>
                 <p>{{ member.major }}, {{ member.degree }}</p>
